@@ -1,0 +1,31 @@
+<ion-view class="slider-view">
+  <ion-content scroll="true">
+    <ion-slide-box show-pager="true">
+      <ion-slide>
+        <div class="list card">
+            <div class="item">
+                <h1>{{ 'TOS' | translate}}</h1>
+            </div>
+            <div class="item item-body">
+                <p>{{ 'TOS_DESCRIPTION' | translate}}</p>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="list card">
+            <div class="item">
+                <h1>{{ 'PRIVACY' | translate}}</h1>
+            </div>
+            <div class="item item-body">
+                <p>{{ 'PRIVACY_DESCRIPTION' | translate}}</p>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+      <div class="alternative-actions">
+          <a class="log-in button button-small button-clear button-light" ui-sref="access.walkthrough">
+            {{ 'BACK' | translate}}
+          </a>
+      </div> 
+  </ion-content>
+</ion-view>

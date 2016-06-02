@@ -1,0 +1,14 @@
+{
+  "name": "WasheryApp",
+  "app_id": "85379975",
+  "gulpStartupTasks": [
+    "sass",
+    "templatecache",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "documentRoot": "www"
+}

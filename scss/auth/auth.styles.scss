@@ -1,0 +1,99 @@
+.auth-outer
+{
+	background-color: $base-color !important;
+
+	ion-view
+	{
+		background-color: transparent;
+		box-shadow: none !important; // Need to set this with important to prevent awefull vertical line when transitioning
+	}
+
+	ion-header-bar
+	{
+		background-color: transparent;
+
+		*
+		{
+			color: $auth-color;
+		}
+	}
+}
+
+.auth-view
+{
+	.row
+	{
+		height: 100%;
+	}
+
+	.bottom-content
+	{
+		padding-top: 0px;
+		border: none;
+
+		.button
+		{
+			margin: 0px;
+			font-weight: bold;
+		}
+	}
+
+	.alternative-actions
+	{
+		margin: 0px 10px;
+
+		.button
+		{
+			padding: 0px;
+			font-size: 14px;
+		}
+
+		.sign-up
+		{
+			float: right;
+		}
+	}
+}
+
+.toggle-view-anchor
+{
+	height: $line-height-computed + $font-size-base;
+	line-height: $line-height-computed + $font-size-base;
+	position: absolute;
+	right: 0px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 500;
+	color: $show-hide-password-color;
+
+	*
+	{
+		color: $show-hide-password-color;
+	}
+}
+
+/** Styling for the username field **/
+label.item.has-error {  
+  border-bottom: 2px solid red;
+}
+
+/** Styling for the password field when an error exists**/
+label.item.has-error-lr {  
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+}
+
+/** Styling for the password field when an error has been resolved**/
+label.item.valid-lr {  
+  border-left: 2px solid green;
+  border-right: 2px solid green;
+}
+
+/** Styling for the error text and container **/
+.form-errors {
+  margin: 5px 0
+}
+.form-error {
+  padding: 2px 0 2px 16px;
+  color: red;
+}

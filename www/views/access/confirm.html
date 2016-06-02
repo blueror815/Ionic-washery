@@ -1,0 +1,38 @@
+<ion-view class="forgot-password-view auth-view" cache-view="false">
+  <ion-content scroll="false">
+    <div class="row">
+      <div class="col col-center">
+        <div class="card forgot-password-container" >
+          <form name="confirm_form" ng-submit="activateAccount()" novalidate ng-cloak>
+
+            <p class="item-body">{{ 'CONFIRMUSER' | translate}}</p>
+            <div class="item item-body">
+              <label class="item item-input" ng-class="{'has-error' : (confirm_form.code.$invalid && confirm_form.code.$touched)}">
+                <input type="text" placeholder="{{ 'CODE' | translate}}" name="code" ng-model="user.code" ng-maxlength="50"required>
+              </label>
+                
+                <div ng-messages="confirm_form.code.$error" ng-if="confirm_form.code.$touched">
+                    <p ng-message="required">{{ 'REQUIRED' | translate}}</p>
+                    <p ng-message="maxlength">{{ 'MAXLENGTH' | translate}}</p>
+                </div>
+                
+            </div>
+            <div class="item item-body bottom-content">
+              <button type="submit" class="button button-positive button-block" ng-disabled="confirm_form.code.$invalid">
+                 {{ 'CONFIRMCODE' | translate}}
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="alternative-actions">
+          <a class="log-in button button-small button-clear button-light" ui-sref="access.login">
+             {{ 'SIGNIN' | translate}}
+          </a>
+          <a class="sign-up button button-small button-clear button-light" ui-sref="access.register">
+             {{ 'SIGNUP' | translate}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

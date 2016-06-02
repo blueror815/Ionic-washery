@@ -1,0 +1,57 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content class="post-size-14px">
+    <ion-nav-bar class="bar app-top-bar">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="main-menu" expose-aside-when="large">
+    <ion-content>
+      <ion-list>
+        <ion-item class="heading-item item item-avatar" nav-clear menu-close ui-sref="user.profile">
+          <div class="user-image-container">
+            <pre-img ratio="_1_1" helper-class="rounded-image">
+              <img class="user-image" ng-src="{{$ctrl.user.image}}" spinner-on-load>
+          	</pre-img>
+          </div>
+          <h2 class="greeting"> {{ 'GREETINGS' | translate}} {{$ctrl.user.name}}</h2>
+          <p class="message">@{{$ctrl.user.username}}</p>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="user.dashboard">
+          <i class="icon ion-home"></i>
+          <h2 class="menu-text"> {{ 'DASHBOARD' | translate}}</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="user.bookings">
+          <i class="icon ion-bag"></i>
+          <h2 class="menu-text"> {{ 'BOOKINGS' | translate}}</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="user.vehicles">
+          <i class="icon ion-model-s"></i>
+          <h2 class="menu-text"> {{ 'VEHICLES' | translate}}</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="user.places">
+          <i class="icon ion-map"></i>
+          <h2 class="menu-text"> {{ 'PLACES' | translate}}</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="user.messages">
+          <i class="icon ion-chatboxes"></i>
+          <h2 class="menu-text"> {{ 'MESSAGES' | translate}}</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="user.payments">
+          <i class="icon ion-card"></i>
+          <h2 class="menu-text"> {{ 'PAYMENTS' | translate}}</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="user.settings">
+          <i class="icon ion-gear-a"></i>
+          <h2 class="menu-text"> {{ 'SETTINGS' | translate}}</h2>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,19 @@
+<ion-view class="profile-view">
+    <ion-nav-title>
+        <span>{{ 'BOOKINGS' | translate}}</span>
+    </ion-nav-title>
+    <ion-content scroll="true">
+        <div class="row header">
+          <div class="col">ID</div>
+          <div class="col">Veicolo</div>
+          <div class="col">Stato</div>
+          <div class="col"></div>
+        </div>
+        <div class="row" ng-repeat="booking in ctrl.bookings">
+          <div class="col">{{booking.id}}</div>
+          <div class="col">{{booking.vehicle}}</div>
+          <div class="col">{{booking.status}}</div>
+          <div class="col"><button class="button" ng-click="ctrl.add($index)">Cancel</button></div>
+        </div>
+    </ion-content>
+</ion-view>

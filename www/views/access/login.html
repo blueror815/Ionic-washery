@@ -1,0 +1,43 @@
+<ion-view class="login-view auth-view" cache-view="false">
+  <ion-content scroll="false">
+    <div class="row">
+      <div class="col col-center">
+        <div class="card login-container" content-tabs tabsdata='tabsdata'>
+          <form name="loginForm" ng-submit="$ctrl.login()" novalidate ng-cloak>
+            <my-tabs>
+              <my-tab title="Login">
+                <div class="list">
+                  <label class="item item-input" ng-class="{'has-error' : (loginForm.username.$invalid && loginForm.username.$touched) }">
+                    <input type="text" placeholder="Username" name="username" ng-model="$ctrl.user.username" required>
+                  </label>
+                    <div ng-messages="loginForm.username.$error" ng-if="loginForm.username.$touched">
+                    <p ng-message="required">{{ 'REQUIRED' | translate}}</p>
+                    </div>
+                  <label class="item item-input" ng-class="{'has-error' : (loginForm.password.$invalid && loginForm.password.$touched) }" show-hide-container>
+                    <input type="password" placeholder="Password" name="password" ng-model="$ctrl.user.password" required show-hide-input>
+                  </label>
+                    <div ng-messages="loginForm.password.$error" ng-if="loginForm.password.$touched">
+                    <p ng-message="required">{{ 'REQUIRED' | translate}}</p>
+                    </div>
+                </div>
+              </my-tab>
+            </my-tabs>
+            <div class="item item-body bottom-content">
+              <button type="submit" class="button button-positive button-block" ng-disabled="(loginForm.username.$invalid || loginForm.password.$invalid)">
+                {{ 'SIGNINBTN' | translate}}
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="alternative-actions">
+          <a class="forgot-password button button-small button-clear button-light" ui-sref="access.forgot-password">
+            {{ 'PASSWORDRESET' | translate}}
+          </a>
+          <a class="sign-up button button-small button-clear button-light" ui-sref="access.register">
+            {{ 'SIGNUP' | translate}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
